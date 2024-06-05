@@ -1,33 +1,38 @@
 /* App.css */
 
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Body styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #bfd4e8;
-  margin: 0;
-  padding: 0;
-  color: #333; /* Text color for better visibility */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 /* Main container styles */
 .App {
+  width: 100%;
+  max-width: 600px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
   text-align: center;
-  margin-left: 350px;
 }
 
 /* Heading styles */
 h1 {
   color: #007bff;
-}
-
-/* Todo wrapper styles */
-.todo-wrapper {
-  max-width: 500px;
-  margin: 20px auto;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  margin-bottom: 20px;
 }
 
 /* Todo input styles */
@@ -35,6 +40,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  margin-bottom: 20px;
 }
 
 .todo-input-item {
@@ -42,12 +48,24 @@ h1 {
   flex-direction: column;
 }
 
+.todo-input-item label {
+  margin-bottom: 5px;
+}
+
+.todo-input-item input, .todo-input-item textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
 /* Button area styles */
 .btn-area {
   display: flex;
   justify-content: center;
   gap: 10px;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 /* Button styles */
@@ -80,7 +98,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   background: #f9f9f9;
-  padding: 10px;
+  padding: 15px;
   border: 1px solid #ddd;
   margin-bottom: 10px;
   border-radius: 5px;
@@ -89,6 +107,19 @@ h1 {
 
 .todo-list-item:hover {
   background-color: #f0f0f0;
+}
+
+.todo-list-item div {
+  display: flex;
+  align-items: center;
+}
+
+.todo-list-item h3 {
+  margin-right: 20px;
+}
+
+.todo-list-item p {
+  margin: 0;
 }
 
 /* Icon styles */
@@ -107,4 +138,73 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .App {
+    padding: 15px;
+  }
+
+  .todo-wrapper {
+    padding: 15px;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .todo-list-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-list-item div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-list-item div:last-child {
+    margin-top: 10px;
+  }
+
+  .icon, .check-icon {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App {
+    padding: 10px;
+  }
+
+  .todo-wrapper {
+    padding: 10px;
+  }
+
+  .primaryBtn, .secondaryBtn {
+    padding: 8px;
+    font-size: 12px;
+  }
+
+  .todo-list-item {
+    padding: 8px;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-list-item div {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .todo-list-item div:last-child {
+    margin-top: 8px;
+  }
+
+  .icon, .check-icon {
+    margin-right: 5px;
+  }
 }
