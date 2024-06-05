@@ -55,7 +55,7 @@ h1 {
 .todo-input-item input, .todo-input-item textarea {
   padding: 10px;
   font-size: 16px;
-  border: 1px solid #ccc;
+  border: 1px solid #a06969;
   border-radius: 5px;
   width: 100%;
 }
@@ -97,7 +97,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #f9f9f9;
+  background: #4d3e3e;
   padding: 15px;
   border: 1px solid #ddd;
   margin-bottom: 10px;
@@ -106,7 +106,7 @@ h1 {
 }
 
 .todo-list-item:hover {
-  background-color: #f0f0f0;
+  background-color: #1f1717;
 }
 
 .todo-list-item div {
