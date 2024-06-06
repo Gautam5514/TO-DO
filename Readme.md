@@ -32,7 +32,7 @@ Follow these steps to set up the project locally:
 
 4.  ## Usage
     
-     **To start the development server and run the application locally**
+     ## To start the development server and run the application locally**
         - npm run dev
 
    4.1. **Open your browser and navigate to (http://localhost:5173)**
